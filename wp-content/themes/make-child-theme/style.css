@@ -1,0 +1,250 @@
+    /**
+ * Theme Name:  The Art of Learning (make child theme)
+ * Theme URI:   https://thethemefoundry.com/make/
+ * Author:      Gene Kobilansky
+ * Author URI:  https://lanckey.com
+ * Description: Create your website without touching a line of code. Make's flexible customization features and a powerful drag and drop page builder make designing your site fun and easy. Build almost anything: a simple portfolio or photography site, an ecommerce business site, a minimalist blog, or even a professional magazine. You'll start by customizing your background, layouts, fonts, colors, and logo. Next, add and organize your content using the drag and drop page builder. Add a photo, a video, a gallery, or even a slider to any page on your website. Make is responsive, so your website will naturally look great on phones, tablets, and desktop screens. It's also fully compatible with popular plugins like WooCommerce, Gravity Forms, Contact Form 7, Jetpack, and WP PageNavi.
+ * Version:     1.1.0
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Template: make
+ * Text Domain: make-child
+ * Domain Path: /languages/
+ * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+ *
+ * Make WordPress Theme, Copyright 2015 The Theme Foundry
+ * Make is distributed under the terms of the GNU GPL
+ */
+    /*
+ * Add your custom styles below.
+ * This version of the Make child theme is only compatible with Make 1.6.0 and above.
+ */
+    /* Fonts */
+    
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /* Menu */
+    
+    @media screen and (min-width: 800px) {
+        .site-navigation ul.menu ul a:hover,
+        .site-navigation ul.menu ul a:focus,
+        .site-navigation .menu ul ul a:hover,
+        .site-navigation .menu ul ul a:focus {
+            border: 1px #d26b97 solid;
+        }
+    }
+    /*Buttons*/
+    
+    input.submit,
+    .btn,
+    #site-content #infinite-handle span button {
+        cursor: pointer;
+        padding: 1em;
+        margin: 1em;
+        text-transform: uppercase;
+        line-height: 1em;
+        display: inline-block;
+        letter-spacing: 0.3em;
+        -webkit-transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
+    
+    input.submit,
+    .btn.-pink,
+    .menu-toggle,
+    #site-content #infinite-handle span button {
+        border: 3px solid rgba(255, 255, 255, 0);
+        outline: 0;
+        color: #fff;
+        background: #D26B97;
+    }
+    
+    input.submit:hover,
+    input.submit:focus,
+    input.submit:active,
+    .menu-toggle:hover,
+    .menu-toggle:focus,
+    .menu-toggle:active,
+    .btn.-pink:hover,
+    .btn.-pink:focus,
+    .btn.-pink:active,
+    #site-content #infinite-handle span button:active,
+    #site-content #infinite-handle span button:hover,
+    #site-content #infinite-handle span button:focus {
+        color: #D26B97;
+        background: none;
+        border-color: #D26B97;
+    }
+    
+    #infinite-handle span button:active,
+    #infinite-handle span button:hover,
+    #infinite-handle span button:focus {
+        padding: 1em;
+        margin: 1em;
+        border: 3px solid;
+        line-height: 1em;
+    }
+    
+    #site-content #infinite-handle {
+        width: inherit;
+        text-align: center;
+    }
+    
+    #site-content #infinite-handle span {
+        background: none;
+    }
+    
+    #site-content #infinite-handle span:after {
+        content: none;
+    }
+    
+    #site-content span.infinite-loader {
+        display: flex;
+        justify-content: center;
+        float: none;
+        color: #D26B97;
+    }
+    /* Hides navigation links and site footer when infinite scroll is active */
+    
+    .infinite-scroll #navigation,
+    .infinite-scroll.neverending #footer {
+        display: none;
+    }
+    /* Shows the footer again in case all posts have been loaded */
+    
+    .infinity-end.neverending #footer {
+        display: block;
+    }
+    /* Footer */
+    
+    #site-footer {
+        background: #0085CD;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #0085CD, #6C151D);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #0085CD, #6C151D);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 4.4rem 0 0 0;
+    }
+    
+    @media screen and (min-width: 800px) {
+        .site-footer .container {
+            position: relative;
+        }
+        .footer-widget-container {
+            width: auto;
+        }
+        .site-footer .footer-social-links {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            padding: 0;
+            line-height: 0;
+        }
+    }
+    
+    @media screen and (max-width: 799px) {
+        .footer-widget-container {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
+    .footer-widget-container .widget {
+        margin-bottom: 0;
+    }
+    
+    .footer-text {
+        text-align: center;
+    }
+    
+    .site-footer a {
+        color: #D26B97;
+    }
+    
+    .footer-text {
+        clear: none;
+    }
+    
+    .social-links a .fa.fa-rss {
+        font-size: 39px;
+    }
+    
+    .social-links a:hover .fa.fa-rss,
+    .social-links a:focus .fa.fa-rss {
+        color: #D26B97;
+    }
+    /* Search Form */
+    
+    .form-search input::-webkit-input-placeholder {
+        color: #eee;
+    }
+    /* Main Page */
+    
+    .post-115 .entry-content {
+        text-align: center;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .home-page-banner p {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        .home-page-banner h2 {
+            display: none;
+        }
+    }
+    
+    .post-115 .entry-content .builder-text-content i {
+        color: #D26B97;
+        margin: .25em 0 .25em 0;
+    }
+    /* Resources Page */
+    
+    #principles {
+        text-align: center;
+    }
+    
+    #principles ul {
+        font-size: 130%;
+    }
+    /* Programs Page */
+    
+    .programs-page {
+        text-align: center;
+    }
+    
+    .child-categories {
+        list-style: none;
+        text-align: center;
+    }
+    
+    .child-categories li {
+        display: inline;
+    }
+    /* Quotes */
+    
+    blockquote {
+        position: relative;
+        padding-left: 1em;
+        border-left: 0.2em solid #0085CD;
+        margin: 1.5em 0 0 0;
+    }
+    
+    blockquote p {
+        font-size: 1.1em;
+    }
+    
+    blockquote:before,
+    blockquote:after {
+        content: '\201C';
+        color: #0085CD;
+    }
+    
+    blockquote:after {
+        content: '\201D';
+    }
