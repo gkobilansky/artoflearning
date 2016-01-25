@@ -26,7 +26,13 @@ var app = {
             url: rootURL + '/posts?filter[category_name]=' + category,
             dataType: 'json',
             success: function (data) {
-                console.log(data);
+
+
+
+                var post = data.shift();
+                console.log(data, post);
+                $('.entry-title').html('<a href=' + post.link + '>' + post.title + '</a>');
+                $('.entry-content').html(post.excerpt);
             },
             error: function (error) {
                 console.log(error);
@@ -92,5 +98,6 @@ var app = {
 $('ul .cat-item a, .mmp-gmap-container ').click(function (event) {
     event.preventDefault();
     app.route(this);
+    $(".posts").empty();
 
 });

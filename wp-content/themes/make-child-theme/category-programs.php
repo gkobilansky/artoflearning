@@ -31,16 +31,13 @@ global $post;
                                             <?php wp_list_categories('orderby=id&show_count=1&title_li=&child_of=3'); ?>
                                         </ul>
 
-                                        <?php if ( have_posts() ) : 
-            
-            /**
-            * repeat loop for featured programs
-            */
+                                        <div class="posts">
+                                            <?php if ( have_posts() ) : 
             
             ?>
 
-                                            <?php while ( have_posts() ) : the_post(); ?>
-                                                <?php
+                                                <?php while ( have_posts() ) : the_post(); ?>
+                                                    <?php
 		/**
 		 * Allow for changing the template partial.
 		 *
@@ -52,13 +49,14 @@ global $post;
 		$template_type = apply_filters( 'make_template_content_archive', 'archive', $post );
 		get_template_part( 'partials/content', $template_type ); ?>
 
-                                                    <?php endwhile; ?>
+                                                        <?php endwhile; ?>
 
-                                                        <?php get_template_part( 'partials/nav', 'paging' ); ?>
+                                                            <?php get_template_part( 'partials/nav', 'paging' ); ?>
 
-                                                            <?php else : ?>
-                                                                <?php get_template_part( 'partials/content', 'none' ); ?>
-                                                                    <?php endif; ?>
+                                                                <?php else : ?>
+                                                                    <?php get_template_part( 'partials/content', 'none' ); ?>
+                                                                        <?php endif; ?>
+                                        </div>
         </main>
 
         <?php ttfmake_maybe_show_sidebar( 'right' ); ?>
