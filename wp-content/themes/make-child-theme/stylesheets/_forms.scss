@@ -1,0 +1,65 @@
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+    background-color: transparent;
+    height: 2.2em;
+    font-size: 2em;
+    background: transparent;
+    border-bottom: solid 4px $grey;
+    transition: border-color 0.6s ease;
+    margin-bottom: 2em;
+    &::-webkit-input-placeholder {
+        color: #ccc;
+        transition: color 0.3s ease;
+    }
+}
+
+li:last-child {
+    textarea,
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"] {
+        margin-bottom: .25em;
+    }
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border-bottom: solid 4px $color_charm_approx;
+    transition: border-color 1s ease;
+}
+
+.gform_body {
+    margin-top: 1em;
+}
+
+.gform_body li {
+    list-style: none;
+}

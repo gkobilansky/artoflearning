@@ -1,0 +1,18 @@
+/* Main Page */
+
+@media screen and(min-width: 600px) {
+	.builder-section-banner.home-page-banner.has-background {
+		padding-top: 0;
+	}
+	.home-page-banner .builder-banner-inner-content {
+		top: 40%;
+	}
+}
+@media screen and(max-width: 615px) {
+	.home-page-banner p {
+		display: none;
+	}
+}
+.post-115 .entry-content {
+	text-align: center;
+}

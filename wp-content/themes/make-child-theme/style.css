@@ -15,272 +15,283 @@
  * Make WordPress Theme, Copyright 2015 The Theme Foundry
  * Make is distributed under the terms of the GNU GPL
  */
-
-
 /*
  * Add your custom styles below.
  * This version of the Make child theme is only compatible with Make 1.6.0 and above.
  */
-
-
-/* Fonts */
-
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
+.break,
+p,
+ul,
+ol,
+dl,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre {
+  word-wrap: normal;
+  word-break: normal; }
 
-/* Menu */
+.ttfmake-button, button, input[type="button"], input[type="reset"], input[type="submit"], .btn, #site-content #infinite-handle span button, input.submit {
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em;
+  text-transform: uppercase;
+  line-height: 1em;
+  display: inline-block;
+  letter-spacing: 0.3em;
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out; }
 
-@media screen and (min-width: 800px) {
-    .site-navigation ul.menu ul a:hover,
-    .site-navigation ul.menu ul a:focus,
-    .site-navigation .menu ul ul a:hover,
-    .site-navigation .menu ul ul a:focus {
-        border: 1px #d26b97 solid;
-    }
-}
+.ttfmake-button, button, input[type="button"], input[type="reset"], input[type="submit"], .btn.-pink, #site-content #infinite-handle span button, .menu-toggle, input.submit {
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 0;
+  outline: 0;
+  color: #fff;
+  background: #d26b97; }
 
+.ttfmake-button:hover, .ttfmake-button:focus, button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus, .btn.-pink:hover, .btn.-pink:focus, .btn.-pink:active, #site-content #infinite-handle span button:active, #site-content #infinite-handle span button:hover, #site-content #infinite-handle span button:focus, .menu-toggle:hover, .menu-toggle:focus, .menu-toggle:active, input.submit:hover, input.submit:focus, input.submit:active {
+  color: #d26b97;
+  background: none;
+  border-color: #d26b97; }
 
-/*Buttons*/
+#infinite-handle span button:active, #infinite-handle span button:hover, #infinite-handle span button:focus {
+  padding: 1em;
+  margin: 1em;
+  border: 3px solid;
+  line-height: 1em; }
+
+blockquote:before, blockquote:after {
+  content: '\201C';
+  color: #0085cd; }
 
 #infinite-handle {
-    float: inherit;
-}
-
-input.submit,
-.btn,
-#site-content #infinite-handle span button {
-    cursor: pointer;
-    padding: 1em;
-    margin: 1em;
-    text-transform: uppercase;
-    line-height: 1em;
-    display: inline-block;
-    letter-spacing: 0.3em;
-    -webkit-transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-input.submit,
-.btn.-pink,
-.menu-toggle,
-#site-content #infinite-handle span button {
-    border: 3px solid rgba(255, 255, 255, 0);
-    outline: 0;
-    color: #fff;
-    background: #D26B97;
-}
-
-input.submit:hover,
-input.submit:focus,
-input.submit:active,
-.menu-toggle:hover,
-.menu-toggle:focus,
-.menu-toggle:active,
-.btn.-pink:hover,
-.btn.-pink:focus,
-.btn.-pink:active,
-#site-content #infinite-handle span button:active,
-#site-content #infinite-handle span button:hover,
-#site-content #infinite-handle span button:focus {
-    color: #D26B97;
-    background: none;
-    border-color: #D26B97;
-}
-
-#infinite-handle span button:active,
-#infinite-handle span button:hover,
-#infinite-handle span button:focus {
-    padding: 1em;
-    margin: 1em;
-    border: 3px solid;
-    line-height: 1em;
-}
+  float: inherit; }
 
 #site-content #infinite-handle {
-    width: inherit;
-    text-align: center;
-}
-
-#site-content #infinite-handle span {
-    background: none;
-}
-
-#site-content #infinite-handle span:after {
-    content: none;
-}
-
+  width: inherit;
+  text-align: center; }
+  #site-content #infinite-handle span {
+    background: none; }
+    #site-content #infinite-handle span:after {
+      content: none; }
 #site-content span.infinite-loader {
-    display: flex;
-    justify-content: center;
-    float: none;
-    color: #D26B97;
-}
+  display: flex;
+  justify-content: center;
+  float: none;
+  color: #d26b97; }
 
-
-/* Hides navigation links and site footer when infinite scroll is active */
-
-.infinite-scroll #navigation,
+.infinite-scroll #navigation {
+  display: none; }
 .infinite-scroll.neverending #footer {
-    display: none;
-}
-
-
-/* Shows the footer again in case all posts have been loaded */
-
-.infinity-end.neverending #footer {
-    display: block;
-}
-
-
-/* Footer */
-
-#site-footer {
-    background: #0085CD;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #0085CD, #6C151D);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #0085CD, #6C151D);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    padding: 4.4rem 0 0 0;
-}
-
-@media screen and (min-width: 800px) {
-    .site-footer .container {
-        position: relative;
-    }
-    .footer-widget-container {
-        width: auto;
-    }
-    .site-footer .footer-social-links {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        padding: 0;
-        line-height: 0;
-    }
-}
-
-@media screen and (max-width: 799px) {
-    .footer-widget-container {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-.footer-widget-container .widget {
-    margin-bottom: 0;
-}
-
-.footer-text {
-    text-align: center;
-}
-
-.site-footer a {
-    color: #D26B97;
-}
-
-.footer-text {
-    clear: none;
-}
-
-.social-links a .fa.fa-rss {
-    font-size: 39px;
-}
-
-.social-links a:hover .fa.fa-rss,
-.social-links a:focus .fa.fa-rss {
-    color: #D26B97;
-}
-
-
-/* Search Form */
-
-.form-search input::-webkit-input-placeholder {
-    color: #eee;
-}
-
-
-/* Main Page */
-
-.post-115 .entry-content {
-    text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-    .home-page-banner p {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .home-page-banner h2 {
-        display: none;
-    }
-}
-
-.post-115 .entry-content .builder-text-content i {
-    color: #D26B97;
-    margin: .25em 0 .25em 0;
-}
-
-
-/* Resources Page */
-
-#principles {
-    text-align: center;
-}
-
-#principles ul {
-    font-size: 130%;
-}
-
-.builder-gallery-content-inner {
-    /*centering vertically */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-/* Programs Page */
-
-.programs-page {
-    text-align: center;
-}
-
-.child-categories {
-    list-style: none;
-    text-align: center;
-}
-
-.child-categories li {
-    display: inline;
-}
-
-
-/* Quotes */
+  display: none; }
 
 blockquote {
-    position: relative;
-    padding-left: 1em;
-    border-left: 0.2em solid #0085CD;
-    margin: 1.5em 0 0 0;
-}
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid #0085cd;
+  margin: 1.5em 0 0 0; }
+  blockquote p {
+    font-size: 1.1em; }
+  blockquote:after {
+    content: '\201D'; }
 
-blockquote p {
-    font-size: 1.1em;
-}
+.builder-gallery-content-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-blockquote:before,
-blockquote:after {
-    content: '\201C';
-    color: #0085CD;
-}
+@media screen and (min-width: 800px) {
+  .site-navigation ul.menu ul a:hover {
+    border: 1px #d26b97 solid; }
+  .site-navigation ul.menu ul a:focus {
+    border: 1px #d26b97 solid; }
+  .site-navigation .menu ul ul a:hover {
+    border: 1px #d26b97 solid; }
+  .site-navigation .menu ul ul a:focus {
+    border: 1px #d26b97 solid; }
 
-blockquote:after {
-    content: '\201D';
-}
+  .site-footer .container {
+    position: relative; }
+  .site-footer .footer-social-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    line-height: 0; }
+
+  .footer-widget-container {
+    width: auto; } }
+#site-footer {
+  background: linear-gradient(to left, #0085cd, #6c151d);
+  padding: 4.4rem 0 0 0; }
+
+@media screen and (max-width: 799px) {
+  .footer-widget-container {
+    width: 100%;
+    text-align: center; } }
+.footer-text {
+  text-align: center;
+  clear: none; }
+
+.infinity-end.neverending #footer {
+  display: block; }
+
+.form-search input::-webkit-input-placeholder {
+  color: #ccc; }
+
+.footer-widget-container .widget {
+  margin-bottom: 0; }
+
+.site-footer a {
+  color: #d26b97; }
+
+.social-links a .fa.fa-rss {
+  font-size: 39px; }
+.social-links a:hover .fa.fa-rss {
+  color: #d26b97; }
+.social-links a:focus .fa.fa-rss {
+  color: #d26b97; }
+
+.site-content .builder-section-panels .ui-state-active,
+.site-content .builder-section-panels .ui-widget-content .ui-state-active,
+.site-content .builder-section-panels .ui-widget-header .ui-state-active {
+  background: #d26b97;
+  border: 1px solid #d26b97; }
+.site-content .builder-section-panels .ui-state-hover,
+.site-content .builder-section-panels .ui-widget-content .ui-state-hover,
+.site-content .builder-section-panels .ui-widget-header .ui-state-hover {
+  background: #d26b97;
+  border: 1px solid #d26b97; }
+.site-content .ttfmp-panels-item-title {
+  border-radius: 0;
+  background: #d26b97; }
+
+/* Here we import our partials */
+/* Main Page */
+@media screen and (min-width: 600px) {
+  .builder-section-banner.home-page-banner.has-background {
+    padding-top: 0; }
+
+  .home-page-banner .builder-banner-inner-content {
+    top: 40%; } }
+@media screen and (max-width: 615px) {
+  .home-page-banner p {
+    display: none; } }
+.post-115 .entry-content {
+  text-align: center; }
+
+/* Programs Page */
+.programs-page {
+  text-align: center; }
+
+.child-categories {
+  list-style: none;
+  text-align: center; }
+
+.child-categories li {
+  display: inline; }
+
+/* Resources Page */
+#principles {
+  text-align: center; }
+  @media screen and (min-width: 400px) {
+    #principles ul {
+      font-size: 130%; } }
+
+/* Learning Module Nouns  */
+.module figure {
+  height: 50%;
+  width: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .module figure:hover {
+    height: 55%;
+    width: 55%; }
+
+/* Doc Galleries */
+.document h4,
+#builder-section-1453826655326 h4 {
+  font-size: 1em; }
+
+textarea,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  background-color: transparent;
+  height: 2.2em;
+  font-size: 2em;
+  background: transparent;
+  border-bottom: solid 4px #ccc;
+  transition: border-color 0.6s ease;
+  margin-bottom: 2em; }
+  textarea::-webkit-input-placeholder,
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="datetime"]::-webkit-input-placeholder,
+  input[type="datetime-local"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="month"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="time"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  input[type="week"]::-webkit-input-placeholder {
+    color: #ccc;
+    transition: color 0.3s ease; }
+
+li:last-child textarea,
+li:last-child input[type="date"],
+li:last-child input[type="datetime"],
+li:last-child input[type="datetime-local"],
+li:last-child input[type="email"],
+li:last-child input[type="month"],
+li:last-child input[type="number"],
+li:last-child input[type="password"],
+li:last-child input[type="search"],
+li:last-child input[type="tel"],
+li:last-child input[type="text"],
+li:last-child input[type="time"],
+li:last-child input[type="url"],
+li:last-child input[type="week"] {
+  margin-bottom: .25em; }
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: color 0.3s ease; }
+
+input:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 4px #d26b97;
+  transition: border-color 1s ease; }
+
+.gform_body {
+  margin-top: 1em; }
+
+.gform_body li {
+  list-style: none; }

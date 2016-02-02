@@ -1,0 +1,37 @@
+/* Resources Page */
+
+#principles {
+    text-align: center;
+    @media screen and(min-width: 400px) {
+        ul {
+            font-size: 130%;
+        }
+    }
+}
+
+
+/* Learning Module Nouns  */
+
+.module figure {
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    &:hover {
+        height: 55%;
+        width: 55%;
+    }
+}
+
+
+/* Doc Galleries */
+
+.document h4,
+#builder-section-1453826655326 h4 {
+    font-size: 1em;
+}

@@ -32,17 +32,7 @@ add_theme_support( 'infinite-scroll', array(
 
 // Search filter for categories
 
-function searchfilter($query) { 
-    
-    $categories = get_the_category(); 
-    $category_id = $categories[0]->cat_ID; 
-    
-    if ($query->is_search && !is_admin() && $category_id === '3' ) { 
-        $query->set('cat', '3');
-    } 
-    return $query; } 
-
-add_filter('pre_get_posts','searchfilter');
+//function searchfilter($query) { // // $categories = get_the_category(); // $category_id = $categories[0]->cat_ID; // // if ($query->is_search && !is_admin() && $category_id === '3' ) { // $query->set('cat', '3'); // } // return $query; } // //add_filter('pre_get_posts','searchfilter');
 
 // Soil Action
 
@@ -50,7 +40,6 @@ function soil_theme_setup() {
 	add_theme_support('soil-clean-up');
     add_theme_support('soil-disable-asset-versioning');
     add_theme_support('soil-jquery-cdn');
-    add_theme_support('soil-js-to-footer');
     add_theme_support('soil-nav-walker');
 
 }
