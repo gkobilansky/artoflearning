@@ -45,6 +45,10 @@
     outline: none;
 }
 
+#ult-fs-search input[type="text"]:focus::-webkit-input-placeholder {
+    color: white;
+}
+
 #ult-fs-search .btn {
     position: absolute;
     top: 50%;

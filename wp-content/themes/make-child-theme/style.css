@@ -263,6 +263,22 @@ input[type="week"] {
   input[type="week"]::-webkit-input-placeholder {
     color: #ccc;
     transition: color 0.3s ease; }
+  textarea:focus::-webkit-input-placeholder,
+  input[type="date"]:focus::-webkit-input-placeholder,
+  input[type="datetime"]:focus::-webkit-input-placeholder,
+  input[type="datetime-local"]:focus::-webkit-input-placeholder,
+  input[type="email"]:focus::-webkit-input-placeholder,
+  input[type="month"]:focus::-webkit-input-placeholder,
+  input[type="number"]:focus::-webkit-input-placeholder,
+  input[type="password"]:focus::-webkit-input-placeholder,
+  input[type="search"]:focus::-webkit-input-placeholder,
+  input[type="tel"]:focus::-webkit-input-placeholder,
+  input[type="text"]:focus::-webkit-input-placeholder,
+  input[type="time"]:focus::-webkit-input-placeholder,
+  input[type="url"]:focus::-webkit-input-placeholder,
+  input[type="week"]:focus::-webkit-input-placeholder {
+    color: transparent;
+    transition: color 0.3s ease; }
 
 li:last-child textarea,
 li:last-child input[type="date"],
@@ -279,10 +295,6 @@ li:last-child input[type="time"],
 li:last-child input[type="url"],
 li:last-child input[type="week"] {
   margin-bottom: .25em; }
-
-:focus::-webkit-input-placeholder {
-  color: transparent;
-  transition: color 0.3s ease; }
 
 input:focus {
   outline: none;
